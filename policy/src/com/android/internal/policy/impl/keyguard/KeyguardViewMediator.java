@@ -666,8 +666,9 @@ public class KeyguardViewMediator {
                                 Settings.System.SCREEN_LOCK_SLIDE_SCREENOFF_DELAY, 0));
 
         // From DevicePolicyAdmin
-        final long policyTimeout = mLockPatternUtils.getDevicePolicyManager()
-                .getMaximumTimeToLock(null, mLockPatternUtils.getCurrentUser());
+        final long policyTimeout = -1;
+				   // mLockPatternUtils.getDevicePolicyManager()
+                // .getMaximumTimeToLock(null, mLockPatternUtils.getCurrentUser());
 
         long timeout;
         if (policyTimeout > 0) {
